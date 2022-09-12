@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>order</div>
+  <div>favour</div>
 </template>
 
 <style scoped></style>

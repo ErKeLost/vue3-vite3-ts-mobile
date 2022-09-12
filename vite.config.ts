@@ -1,9 +1,11 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Icons from 'unplugin-icons/vite'
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import { VantResolver } from 'unplugin-vue-components/resolvers'
 import IconsResolver from 'unplugin-icons/resolver'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import { VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
@@ -11,7 +13,22 @@ import { resolvePath } from './src/utils/utils'
 
 // https://vitejs.dev/config/
 const vitePath = resolvePath('../../../', import.meta.url)
+function pathResolve(dir: string) {
+  return resolve(process.cwd(), '.', dir)
+}
 export default defineConfig({
+  resolve: {
+    alias: [
+      {
+        find: /\/#\//,
+        replacement: `${pathResolve('types')}/`
+      },
+      {
+        find: '@',
+        replacement: `${pathResolve('src')}/`
+      }
+    ]
+  },
   plugins: [
     vue(),
     Unocss({
@@ -41,6 +58,7 @@ export default defineConfig({
         // IconsResolver({
         //   enabledCollections: ['a']
         // }),
+        VantResolver(),
         IconsResolver({
           customCollections: ['custom'],
           componentPrefix: 'icon'
