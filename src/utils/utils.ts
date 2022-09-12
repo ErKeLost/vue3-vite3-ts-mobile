@@ -59,3 +59,7 @@ export function resolvePath(rootPath: string, basePath: string) {
     src
   }
 }
+
+export function getAssetsUrl(imageUrl: string) {
+  return new URL(`${process.cwd()}/src/assets/${imageUrl}`, import.meta.url).href
+}

@@ -3,6 +3,7 @@
 <template>
   <div>
     <router-view />
+    <TabBar />
   </div>
 </template>
 
