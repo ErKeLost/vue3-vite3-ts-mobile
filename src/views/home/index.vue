@@ -1,11 +1,11 @@
 <template>
-  <div>home</div>
+  <div class="home">home</div>
 </template>
 
 <script setup lang="ts"></script>
 
 <style scoped>
-div {
-  font-size: 14px;
+.home {
+  font-size: 40px;
 }
 </style>
