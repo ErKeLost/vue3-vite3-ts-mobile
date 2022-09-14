@@ -21,6 +21,13 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/favour',
     component: () => import('@/views/favour/index.vue')
+  },
+  {
+    path: '/city',
+    component: () => import('@/views/city/index.vue'),
+    meta: {
+      hiddenTabBar: true
+    }
   }
 ]
 

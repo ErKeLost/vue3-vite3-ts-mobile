@@ -1,9 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const route = useRoute()
+</script>
 
 <template>
   <div>
     <router-view />
-    <TabBar />
+    <TabBar v-if="!route.meta?.hiddenTabBar" />
   </div>
 </template>
 

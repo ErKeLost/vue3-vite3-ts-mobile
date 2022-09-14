@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    City: typeof import('./../src/views/city/index.vue')['default']
     Favour: typeof import('./../src/views/favour/index.vue')['default']
     Header: typeof import('./../src/views/home/cpns/header.vue')['default']
     HelloWorld: typeof import('./../src/components/HelloWorld.vue')['default']
@@ -16,7 +17,13 @@ declare module '@vue/runtime-core' {
     Profile: typeof import('./../src/views/profile/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Search: typeof import('./../src/views/home/cpns/search.vue')['default']
+    SearchCity: typeof import('./../src/views/city/cpns/search-city.vue')['default']
     TabBar: typeof import('./../src/components/tabBar/index.vue')['default']
+    TabCity: typeof import('./../src/views/city/cpns/tab-city.vue')['default']
     VanIcon: typeof import('vant/es')['Icon']
+    VanSearch: typeof import('vant/es')['Search']
+    VanTab: typeof import('vant/es')['Tab']
+    VanTabs: typeof import('vant/es')['Tabs']
   }
 }
