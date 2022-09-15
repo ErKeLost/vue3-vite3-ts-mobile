@@ -16,10 +16,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 46px;
+    height: 100px;
     .title {
       color: var(--primary-color);
-      font-size: 16px;
+      font-size: 32px;
       font-weight: 600;
     }
   }

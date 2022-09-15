@@ -36,6 +36,7 @@ declare global {
   const eagerComputed: typeof import('@vueuse/core')['eagerComputed']
   const effectScope: typeof import('vue')['effectScope']
   const extendRef: typeof import('@vueuse/core')['extendRef']
+  const formatMonthDay: typeof import('../src/utils/format')['formatMonthDay']
   const getActivePinia: typeof import('pinia')['getActivePinia']
   const getAssetsUrl: typeof import('../src/utils/utils')['getAssetsUrl']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']

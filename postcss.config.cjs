@@ -2,13 +2,21 @@ const path = require('path')
 
 const judgeComponent = (file) => {
   const ignore = ['vant', '@nutui', '@varlet']
-  return ignore.some((item) => path.join(file).includes(path.join('node_modules', item)))
+  return ignore.some((item) =>
+    path.join(file).includes(path.join('node_modules', item))
+  )
 }
 
 module.exports = {
   plugins: {
     autoprefixer: {
-      overrideBrowserslist: ['Android 4.1', 'iOS 7.1', 'Chrome > 31', 'ff > 31', 'ie >= 8']
+      overrideBrowserslist: [
+        'Android 4.1',
+        'iOS 7.1',
+        'Chrome > 31',
+        'ff > 31',
+        'ie >= 8'
+      ]
     },
     'cnjm-postcss-px-to-viewport': {
       unitToConvert: 'px', // 要转化的单位

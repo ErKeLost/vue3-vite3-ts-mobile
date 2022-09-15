@@ -33,13 +33,10 @@ const currentGroup = computed(() => {
           <van-tab :title="value.title" :name="key"></van-tab>
         </template>
       </van-tabs>
-      {{ currentGroup }}
     </div>
     <div class="content">
-      <template v-for="item in 100" :key="item">
-        <div>
-          {{ item }}
-        </div>
+      <template v-for="(value, key, index) in allCities" :key="key">
+        <TabCity v-show="tabActive === key" :current-group="value" />
       </template>
     </div>
   </div>
@@ -48,6 +45,10 @@ const currentGroup = computed(() => {
 <style scoped lang="scss">
 .city {
   --van-tabs-line-height: 90px;
+}
+.top {
+  position: relative;
+  z-index: 9;
 }
 .content {
   height: calc(100vh - 98px);
