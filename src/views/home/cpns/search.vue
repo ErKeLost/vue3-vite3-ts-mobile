@@ -42,7 +42,7 @@ function onConfirm(value) {
 </script>
 
 <template>
-  <div>
+  <div ml-6 mr-6>
     <div class="location">
       <div class="city" @click="handleCity">
         {{ currentCity.cityName || '大连' }}
@@ -53,17 +53,24 @@ function onConfirm(value) {
       </div>
     </div>
     <!-- 日期选择 -->
-    <div @click="show = !show" class="date-range">
-      <div class="start">
-        <div class="date">
-          <span class="tip">入住</span>
-          <span class="time">{{ startDate }}</span>
+    <div
+      flex
+      h-15
+      color="#666"
+      items-center
+      justify-between
+      @click="show = !show"
+    >
+      <div flex>
+        <div flex flex-col items-center>
+          <span mb-2>入住</span>
+          <span>{{ startDate }}</span>
         </div>
-        <div class="stay">共{{ stayCount }}晚</div>
       </div>
+      <div class="stay">共{{ stayCount }}晚</div>
       <div class="end">
-        <div class="date">
-          <span>入住</span>
+        <div flex flex-col items-center>
+          <span mb-2>入住</span>
           <span>{{ endDate }}</span>
         </div>
       </div>
@@ -75,15 +82,26 @@ function onConfirm(value) {
       @confirm="onConfirm"
     />
     <!-- 价格人数 -->
+    <div color="#666" h-10 flex justify-between items-center>
+      <div>价格不限</div>
+      <div>人数不限</div>
+    </div>
     <!-- 热门建议 -->
-    <div class="section hot-suggest">
+    <div color="#666" h-10 flex justify-between items-center>
+      关键字 / 位置 / 民宿名
+    </div>
+    <div class="section hot-suggest" flex flex-wrap>
       <template v-for="(item, index) in hotSuggest" :key="index">
         <div
-          class="item"
+          p-2
+          mb-3
+          mr-3
+          border-rd
           :style="{
-            color: 'item.tagText.color ',
-            background: 'item.tagText.background.color'
+            color: item.tagText.color,
+            background: item.tagText.background.color
           }"
+          class="item"
         >
           {{ item.tagText.text }}
         </div>
@@ -96,10 +114,8 @@ function onConfirm(value) {
 .hot-suggest {
   margin: 20px 20px 20px 0;
   .item {
-    padding: 6px 10px;
     border-radius: 6px;
-    margin: 10px 10px 10px 0;
-    font-size: 25px;
+    font-size: 24px;
     line-height: 1;
   }
 }
@@ -119,6 +135,10 @@ function onConfirm(value) {
     justify-content: space-between;
     .text {
       font-size: 14px;
+      line-height: 1;
+      position: relative;
+      top: 2px;
+      color: #666;
     }
     width: 150px;
     img {
