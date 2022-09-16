@@ -12,6 +12,8 @@ declare module '@vue/runtime-core' {
     Header: typeof import('./../src/views/home/cpns/header.vue')['default']
     Home: typeof import('./../src/views/home/index.vue')['default']
     HouseItem: typeof import('./../src/components/house-item/index.vue')['default']
+    ItemV3: typeof import('./../src/components/house-item/item-v3.vue')['default']
+    ItemV9: typeof import('./../src/components/house-item/item-v9.vue')['default']
     List: typeof import('./../src/views/home/cpns/list.vue')['default']
     Message: typeof import('./../src/views/message/index.vue')['default']
     Order: typeof import('./../src/views/order/index.vue')['default']

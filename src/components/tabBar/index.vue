@@ -74,9 +74,10 @@ function turnPage(item: any, index: number) {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 50px;
   display: flex;
   border: 1px solid rgb(240, 240, 240);
+  background: #fff;
 }
 .active {
   color: var(--primary-color);

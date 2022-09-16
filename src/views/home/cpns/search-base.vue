@@ -128,8 +128,8 @@ function searchClick() {
 .hot-suggest {
   margin: 20px 20px 20px 0;
   .item {
-    border-radius: 6px;
-    font-size: 24px;
+    border-radius: 3px;
+    font-size: 12px;
     line-height: 1;
   }
 }
@@ -147,6 +147,7 @@ function searchClick() {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 110px;
     .text {
       font-size: 14px;
       line-height: 1;
@@ -154,21 +155,20 @@ function searchClick() {
       top: 2px;
       color: #666;
     }
-    width: 150px;
     img {
-      margin-left: 10px;
-      width: 40px;
-      height: 40px;
+      margin-left: 0px;
+      width: 30px;
+      height: 30px;
     }
   }
 }
 .btn {
-  width: 650px;
-  height: 80px;
-  font-size: 36px;
-  line-height: 80px;
+  width: 340px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
   text-align: center;
-  border-radius: 40px;
+  border-radius: 20px;
   color: #fff;
   background-image: var(--theme-linear-gradient);
 }

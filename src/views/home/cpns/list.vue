@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHomeStore } from '@/store'
+import ItemV9 from '@/components/house-item/item-v9.vue'
 const homeStore = useHomeStore()
 const { houseList } = storeToRefs(homeStore)
 withDefaults(
@@ -13,14 +14,20 @@ withDefaults(
 </script>
 
 <template>
-  <div ml-3 class="content">
-    <h2>{{ title }}</h2>
+  <div class="content">
+    <h2 ml-3>{{ title }}</h2>
     <div class="list">
       <template v-for="item in houseList" :key="item.data.houseId">
-        <houseItem :item="item.data" />
+        <ItemV9 v-if="item.discoveryContentType === 9" :item="item.data" />
+        <ItemV3 v-else :item="item.data" />
       </template>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>

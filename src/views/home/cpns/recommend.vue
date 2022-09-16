@@ -21,10 +21,10 @@ const { categories } = storeToRefs(homeStore)
     display: none;
   }
   .item {
-    width: 150px;
+    width: 75px;
     flex-shrink: 0;
     .title {
-      font-size: 28px;
+      font-size: 14px;
     }
   }
 }

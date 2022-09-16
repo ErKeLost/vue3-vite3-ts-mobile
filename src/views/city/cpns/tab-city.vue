@@ -42,17 +42,17 @@ function cityClick(city) {
 .list {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
-  padding-right: 50px;
+  padding: 10px;
+  padding-right: 25px;
   flex-wrap: wrap;
   .city {
-    width: 140px;
-    height: 56px;
-    border-radius: 30px;
+    width: 70px;
+    height: 28px;
+    border-radius: 15px;
     background-color: #fff4ec;
     color: #000;
     text-align: center;
-    line-height: 56px;
+    line-height: 28px;
     margin: 20px 0;
   }
 }

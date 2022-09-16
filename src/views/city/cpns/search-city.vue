@@ -44,7 +44,7 @@ const currentGroup = computed(() => {
 
 <style scoped lang="scss">
 .city {
-  --van-tabs-line-height: 90px;
+  --van-tabs-line-height: 45px;
 }
 .top {
   position: relative;
