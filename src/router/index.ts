@@ -28,6 +28,13 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       hiddenTabBar: true
     }
+  },
+  {
+    path: '/search',
+    component: () => import('@/views/search/index.vue'),
+    meta: {
+      hiddenTabBar: true
+    }
   }
 ]
 

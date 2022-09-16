@@ -39,6 +39,18 @@ function onConfirm(value) {
   endDate.value = formatMonthDay(value[1])
   stayCount.value = diffDate(value[0], value[1])
 }
+
+// 搜索
+function searchClick() {
+  router.push({
+    path: '/search',
+    query: {
+      startDate,
+      endDate,
+      currentCity
+    }
+  })
+}
 </script>
 
 <template>
@@ -107,6 +119,8 @@ function onConfirm(value) {
         </div>
       </template>
     </div>
+    <!-- search 按钮 -->
+    <div class="btn" @click="searchClick">搜索</div>
   </div>
 </template>
 
@@ -147,5 +161,15 @@ function onConfirm(value) {
       height: 40px;
     }
   }
+}
+.btn {
+  width: 650px;
+  height: 80px;
+  font-size: 36px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 40px;
+  color: #fff;
+  background-image: var(--theme-linear-gradient);
 }
 </style>

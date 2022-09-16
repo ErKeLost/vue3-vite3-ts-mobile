@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <Header />
-    <Search />
+    <SearchBase />
+    <recommend />
+    <List />
   </div>
 </template>
 
@@ -9,4 +11,6 @@
 import { useHomeStore } from '@/store'
 const homeStore = useHomeStore()
 homeStore.getHotSuggestList()
+homeStore.getCategoriesList()
+homeStore.getHouseList()
 </script>
